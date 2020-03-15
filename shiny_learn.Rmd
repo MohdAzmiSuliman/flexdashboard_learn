@@ -1,0 +1,43 @@
+---
+title: "Learn Shiny Dashboard"
+author: "Mohd Azmi"
+date: "15/03/2020"
+output: flexdashboard::flex_dashboard
+---
+
+
+```{r}
+library(dygraphs)
+library(flexdashboard)
+library(DT)
+library(summarytools)
+library(tidyverse)
+```
+
+
+Column
+-----------
+
+### Cars
+
+```{r}
+knitr::kable(mtcars)
+```
+
+### Cars2
+
+```{r}
+datatable(mtcars, options = list(bPaginate = F))
+```
+
+
+Column
+----------
+
+### Cars3
+
+```{r}
+datatable(mtcars, options = list(pageLength = 25))
+```
+
+
